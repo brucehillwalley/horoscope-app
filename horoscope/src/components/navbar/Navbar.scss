@@ -1,0 +1,32 @@
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: aquamarine;
+    img{
+        margin-left: 15px;
+    }
+
+    ul{
+        display: flex;
+        list-style: none;
+        justify-content: space-around;
+        align-items: center;
+        gap: 1rem;
+        margin-right: 15px;
+        
+        li{
+            padding: 10px;
+            border-radius: 10px;
+            &:hover{
+                color: #3498db;
+                background-color: black;
+            }
+            a{
+                text-decoration: none;
+            }
+
+        }
+        
+    }
+}
