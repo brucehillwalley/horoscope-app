@@ -1,9 +1,19 @@
-
-
-const Card = () => {
+const Card = ({ horoscope }) => {
+  console.log();
   return (
-    <div>Card</div>
-  )
-}
+    <div className="card">
+      <div className="title">
+        <h3>{horoscope.title}</h3>
+      </div>
+      <img src={horoscope.image} alt={horoscope.title} width="300px" />
+      <div className="card__over">
+        <h2>{horoscope.desc}</h2>
+      </div>
+      <div className="card__date">
+        <p>{horoscope.date}</p>
+      </div>
+    </div>
+  );
+};
 
-export default Card
+export default Card;
