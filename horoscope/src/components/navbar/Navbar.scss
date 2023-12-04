@@ -1,33 +1,41 @@
-.nav{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: aquamarine;
-    font-family:'Rubik Marker Hatch', sans-serif;
-    img{
-        margin-left: 15px;
-    }
+@import "../../sass/mixin";
+@import "../../sass/variables";
+.nav {
+  display: flex;
 
-    ul{
-        display: flex;
-        list-style: none;
-        justify-content: space-around;
-        align-items: center;
-        gap: 1rem;
-        margin-right: 15px;
-        
-        li{
-            padding: 10px;
-            border-radius: 10px;
-            &:hover{
-                color: #3498db;
-                background-color: black;
-            }
-            a{
-                text-decoration: none;
-            }
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(132, 210, 229);
+  font-family: "Rubik Marker Hatch", sans-serif;
+  img {
+    margin-left: 15px;
+  }
 
-        }
-        
+  ul {
+    @include flex(row, space-around, 1rem);
+    // display: flex;
+    // justify-content: space-around;
+    // align-items: center;
+    list-style: none;
+    margin-right: 15px;
+
+    li {
+      padding: 10px;
+      border-radius: 10px;
+
+      &:hover {
+        background-color: $cardBgColor;
+      }
+      a {
+        color: $cardColor;
+        text-decoration: none;
+      }
     }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .nav ul li a {
+    display: block;
+  }
 }

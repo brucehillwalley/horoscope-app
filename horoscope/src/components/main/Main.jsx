@@ -4,7 +4,7 @@ import {data} from "../../helper/data.js"
 
 const Main = () => {
   return (
-    <div>
+    <div className="main-div">
     {data.map((horoscope, index)=>(
       <Card key={index} horoscope={horoscope}/>
     ))}

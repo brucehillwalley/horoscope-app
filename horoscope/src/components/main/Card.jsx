@@ -5,7 +5,7 @@ const Card = ({ horoscope }) => {
       <div className="title">
         <h3>{horoscope.title}</h3>
       </div>
-      <img src={horoscope.image} alt={horoscope.title} width="300px" />
+      <img src={horoscope.image} alt={horoscope.title} />
       <div className="card__over">
         <h2>{horoscope.desc}</h2>
       </div>

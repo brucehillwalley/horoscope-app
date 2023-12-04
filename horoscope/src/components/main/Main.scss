@@ -1,0 +1,81 @@
+@import "../../sass/mixin";
+@import "../../sass/variables";
+@import url('https://fonts.googleapis.com/css2?family=Almendra+Display&display=swap');
+
+.main-div {
+  @include flex(row, space-evenly, 2rem);
+  margin: 1rem;
+
+  .card {
+    width: 500px;
+    height: $cardHeight;
+    position: relative;
+    overflow: hidden;
+    .title {
+    font-family:'Rubik Marker Hatch', sans-serif;
+      position: absolute;
+      top: 0;
+      left: 0;
+      color: aliceblue;
+      z-index: 3;
+      background-color: $cardBgColor;
+      color: darken($cardColor, 10%);
+      padding: $cardPadding;
+      font-size: 1.2rem;
+      border-radius: $borderRadius;
+    }
+    img {
+      width: 100%;
+      height: $cardHeight;
+      border-radius: $borderRadius;
+      filter:grayscale(75%);
+    
+    }
+    &__over {
+        font-family: "Almendra Display", cursive;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-color: $cardBgColor;
+        color: darken($cardColor, 10%);
+        font-size: 1.1rem;
+        padding: $cardPadding;
+        border-radius: $borderRadius;
+        transform: translateY(100%);
+        transition: transform 0.7s ease-in-out;
+        z-index: 3;
+        height: 60%;
+        text-align: center;
+        overflow: auto;
+
+
+        &::-webkit-scrollbar {
+          display: none;
+        }
+      
+    }
+    &:hover .card__over{
+        transform: translateY(0%);
+
+
+    }
+
+    &__date{
+        position: absolute;
+        font-family:'Rubik Marker Hatch', sans-serif;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: $cardBgColor;
+        color: $cardColor;
+        padding: $cardPadding;
+        font-size: 0.9rem;
+        border-radius: $borderRadius;
+        z-index: 2;
+    }
+    &:hover img{
+        filter: none;
+      }
+  }
+}
